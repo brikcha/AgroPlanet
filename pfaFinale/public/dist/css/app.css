@@ -1,0 +1,59 @@
+.clear {
+    background-image: url("https://news.in-24.com/temp/resized/medium_2021-05-11-8c01f7b7ae.jpg");
+}
+.rain {
+    background-image: url("https://www.novinite.com/media/images/2020-01/photo_verybig_202932.jpg");
+}
+.snow {
+    background-image: url("https://www.ctvnews.ca/polopoly_fs/1.5165806.1603982540!/httpImage/image.jpg_gen/derivatives/landscape_1020/image.jpg");
+}
+.clouds {
+    background-image: url("https://cdn.shopify.com/s/files/1/1406/4308/articles/Looking-at-the-clouds-can-help-you-predict-bad-weather-_697_6052888_0_14103285_1000_1024x.jpg?v=1500990343");
+}
+
+body{
+    font-family: "Trebuchet MS";
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+    font-size: 3em;
+    position: relative;
+}
+
+i.wi{
+    font-size: 5em;
+    line-height: 3em;
+}
+
+h2{
+    font-size: 2em;
+}
+
+.tooltip{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+    transition: opacity .3s, top .5s;
+}
+
+h1:hover .tooltip {
+    top: -50px;
+    opacity: 1;
+
+}

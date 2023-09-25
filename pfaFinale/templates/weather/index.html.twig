@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css"
+          integrity="sha512-r/Gan7PMSRovDus++vDS2Ayutc/cSdl268u047n4z+k7GYuR7Hiw71FsT3QQxdKJBVHYttOJ6IGLnlM9IoMToQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<section id="app">
+    <h1>
+        <span id="ville"></span>
+        <span class="tooltip">Tapez une autre ville si vous le souhaitez</span>
+    </h1>
+    <i class="wi"></i>
+    <h2>
+          <span id="tempirature" ></span> C°(<span id="condition"> </span>)
+    </h2>
+
+</section>
+<script src="{{ asset('dist/js/app.js') }}"></script>
+</body>
+</html>
+

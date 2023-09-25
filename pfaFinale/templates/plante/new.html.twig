@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Plante{% endblock %}
+
+{% block body %}
+ <div class="m-3">
+     <h1>{% trans %} Ajouter une nouvelle  Plante {% endtrans %}</h1>
+
+     {{ include('plante/_form.html.twig') }}
+
+     <a href="{{ path('plante_index') }}" class="btn-dark btn">{% trans %}revenir à la liste{% endtrans %}</a>
+ </div>
+{% endblock %}

@@ -1,0 +1,113 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+         <img src="{{ asset('dist/img/ag.png') }}" alt="AdminLTE Logo" class="brand-image ml-3"
+         style="opacity: .8; width: 100px;">
+        <span class="brand-text font-weight-light" style="opacity: 1; margin: 0; padding: 0; font-weight: bold">AgroPlanet</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+{#             <div class="image">#}
+{#             <img src="{{ asset('dist/img/hazem.jpg') }}" class="img-circle elevation-2" alt="User Image">AgroPlanet#}
+{#             </div>#}
+
+            {% if app.user %}
+                <div class="info text-center">
+                    <a href="#" class="d-block">{{ app.user.username }}</a>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- SidebarSearch Form -->
+
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                <li class="nav-item">
+                    <a href="{{ path('stats') }}" class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i></i>
+                        <p>
+                          {% trans %} Statistiques {% endtrans %}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('weather') }}" class="nav-link" target="_blank">
+                        <i class="nav-icon fas fa-chart-pie"></i></i>
+                        <p>
+                            {% trans %} Metéo {% endtrans %}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('categorie_index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-list-alt"></i></i>
+                        <p>
+                            {% trans %} Categories {% endtrans %}
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ path('plante_index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-seedling"></i></i>
+                        <p>
+                            {% trans %}  Plantes {% endtrans %}
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ path('maladie_index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-disease"></i></i>
+                        <p>
+                            {% trans %} Maladies {% endtrans %}
+                        </p>
+                    </a>
+                </li>
+
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="nav-item">
+                        <a href="{{ path('admin_utilisateurs') }}" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i></i>
+                            <p>
+                                {% trans %} Utilisateurs {% endtrans %}
+                            </p>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if not app.user %}
+                    <li class="nav-item">
+                        <a href="{{ path('security_login') }}" class="nav-link">
+                            <i class="nav-icon fas fa-sign-in-alt"></i></i>
+                            <p>
+                                {% trans %} Connexion {% endtrans %}
+                            </p>
+                        </a>
+                    </li>
+                {% else %}
+
+                    <li class="nav-item">
+                        <a href="{{ path('security_logout') }}" class="nav-link">
+                            <i class="nav-icon fas fa-person-booth"></i></i>
+                            <p>
+                                {% trans %} Déconnexion {% endtrans %}
+                            </p>
+                        </a>
+                    </li>
+                {% endif %}
+
+
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

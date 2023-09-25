@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="3iFR_fy" resname="Statistiques">
+        <source>Statistiques</source>
+        <target>Charts</target>
+      </trans-unit>
+      <trans-unit id="dUOm3Mf" resname="Metéo">
+        <source>Metéo</source>
+        <target>Weather</target>
+      </trans-unit>
+      <trans-unit id="uLHYlMa" resname="Categories">
+        <source>Categories</source>
+        <target>Categories</target>
+      </trans-unit>
+      <trans-unit id="_INoYcw" resname="Plantes">
+        <source>Plantes</source>
+        <target>Plants</target>
+      </trans-unit>
+      <trans-unit id="7P7hBCW" resname="Maladies">
+        <source>Maladies</source>
+        <target>Diseases</target>
+      </trans-unit>
+      <trans-unit id="I9OTi17" resname="Utilisateurs">
+        <source>Utilisateurs</source>
+        <target>Users</target>
+      </trans-unit>
+      <trans-unit id="YdaVBBA" resname="Connexion">
+        <source>Connexion</source>
+        <target>Log in</target>
+      </trans-unit>
+      <trans-unit id="_1_eksG" resname="Déconnexion">
+        <source>Déconnexion</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="Ab2yblp" resname="revenir à la liste">
+        <source>revenir à la liste</source>
+        <target>back to list</target>
+      </trans-unit>
+      <trans-unit id="jEBJ68s" resname="Ajouter catégorie">
+        <source>Ajouter catégorie</source>
+        <target>add categorie</target>
+      </trans-unit>
+      <trans-unit id="HujB0yq" resname="aucune données">
+        <source>aucune données</source>
+        <target>no data found</target>
+      </trans-unit>
+      <trans-unit id="sf41Rhu" resname="Modifier Catégorie">
+        <source>Modifier Catégorie</source>
+        <target>Update Categorie</target>
+      </trans-unit>
+      <trans-unit id="9jF9S2Y" resname="Ajouter une nouvelle Categorie">
+        <source>Ajouter une nouvelle Categorie</source>
+        <target>Add Categorie</target>
+      </trans-unit>
+      <trans-unit id="JwjOHMm" resname="Evoulution de maladie par plante">
+        <source>Evoulution de maladie par plante</source>
+        <target>Evolution of disease per plant </target>
+      </trans-unit>
+      <trans-unit id="e0BPh5S" resname="Evoulution de plante par jour">
+        <source>Evoulution de plante par jour</source>
+        <target>Plant evolution per day </target>
+      </trans-unit>
+      <trans-unit id="LmR1Xox" resname="Modifier Maladie">
+        <source>Modifier Maladie</source>
+        <target>Update Disease</target>
+      </trans-unit>
+      <trans-unit id="NadBNC6" resname="Ajouter maladie">
+        <source>Ajouter maladie</source>
+        <target>Add Disease</target>
+      </trans-unit>
+      <trans-unit id="IU1E7cF" resname="ajouter une nouvelle Maladie">
+        <source>ajouter une nouvelle Maladie</source>
+        <target>Add  Disease</target>
+      </trans-unit>
+      <trans-unit id="kCWgUH3" resname="Maladie">
+        <source>Maladie</source>
+        <target>Disease</target>
+      </trans-unit>
+      <trans-unit id="XiecWHw" resname="Modifier Plante">
+        <source>Modifier Plante</source>
+        <target>Update Plant</target>
+      </trans-unit>
+      <trans-unit id="PPF9zY3" resname="Ajouter plante">
+        <source>Ajouter plante</source>
+        <target>Add plant</target>
+      </trans-unit>
+      <trans-unit id="YFbpeZv" resname="Ajouter une nouvelle  Plante">
+        <source>Ajouter une nouvelle  Plante</source>
+        <target>Add  Plant</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

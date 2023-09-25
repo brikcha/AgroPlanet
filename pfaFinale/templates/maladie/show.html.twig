@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maladie{% endblock %}
+
+{% block body %}
+    <div class="m-3">
+        <h1>{% trans %}Maladie{% endtrans %}</h1>
+        <div class="text-center mb-3">
+            <img src="{{ asset('img/' ~ maladie.image) }}" alt="plante image" height="400px" width="auto">
+        </div>
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ maladie.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ maladie.nom }}</td>
+            </tr>
+            <tr>
+                <th>Solution</th>
+                <td>{{ maladie.solution }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ maladie.description }}</td>
+            </tr>
+            <tr>
+                <th>Historique</th>
+                <td>{{ maladie.historique }}</td>
+            </tr>
+            <tr>
+                <th>Liste de plantes</th>
+                <td>
+                    {% for plante in maladie.plantes %}
+                        <p>{{ plante.nom }}</p>
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <th>Répartition spatio- temporelle</th>
+                <td>
+                    <iframe src="{{ maladie.position }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ path('maladie_index') }}" class="btn btn-dark">{% trans %}revenir à la liste{% endtrans %}</a>
+    </div>
+
+{% endblock %}

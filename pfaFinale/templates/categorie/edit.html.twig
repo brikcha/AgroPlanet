@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Catégorie{% endblock %}
+
+{% block body %}
+   <div class="m-3">
+       <h1>{% trans %} Modifier Catégorie {% endtrans %}</h1>
+
+       {{ include('categorie/_form.html.twig', {'button_label': 'Mise à jour'}) }}
+       <a href="{{ path('categorie_index') }}" class="btn btn-dark">{% trans %}revenir à la liste{% endtrans %}</a>
+   </div>
+{% endblock %}

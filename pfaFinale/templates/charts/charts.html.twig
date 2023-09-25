@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+          integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <div class="row">
+        <div class="col-6 text-center">
+            <h3>{% trans %}Evolution des maladies par plante {% endtrans %}</h3>
+        </div>
+        <div class="col-6 text-center">
+            <h3>{% trans %}Evolution des plantes par jour{% endtrans %}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <canvas id="maladies" width="400" height="350">
+            </canvas>
+        </div>
+        <div class="col-6">
+            <canvas id="plantes" width="400" height="350">
+            </canvas>
+        </div>
+{#        {{ dump() }}#}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+            integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let maladies = document.querySelector("#maladies");
+        let maladieGraphe = new Chart(maladies, {
+            type: "pie",
+            data: {
+                labels: {{ maladieNom|raw }},
+                datasets: [{
+                    label: "Répartition de maladie par plante",
+                    data: {{ maladieCount|raw }},
+                    backgroundColor: {{ maladieColor|raw }}
+                }]
+            }
+        })
+
+        let plantes = document.querySelector("#plantes");
+        let planteGraphe = new Chart(plantes, {
+            type: "line",
+            data: {
+                labels: {{ dates|raw }},
+                datasets: [{
+                    label: "Répartition de plante par jour",
+                    data: {{ plantesCount|raw }}
+                }]
+            }
+        })
+    </script>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

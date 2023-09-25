@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}modifier Maladie{% endblock %}
+
+{% block body %}
+  <div class="m-3">
+      <h1>{% trans %}Modifier Maladie{% endtrans %}</h1>
+
+      {{ include('maladie/_form.html.twig', {'button_label': 'Mise à jour'}) }}
+
+      <a href="{{ path('maladie_index') }}" class="btn btn-dark">{% trans %}revenir à la liste{% endtrans %}</a>
+
+  </div>
+{% endblock %}

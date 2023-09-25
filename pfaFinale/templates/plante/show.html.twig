@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Plante{% endblock %}
+
+{% block body %}
+    <div class="m-3">
+
+        <h1>{% trans %}Plantes{% endtrans %}</h1>
+        <div class="text-center mb-3">
+            <img src="{{ asset('img/' ~ plante.image) }}" alt="plante image" height="400px" width="auto">
+        </div>
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ plante.id }}</td>
+            </tr>
+            <tr>
+                <th>Plante</th>
+                <td>{{ plante.nom }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ plante.description }}</td>
+            </tr>
+            <tr>
+                <th>Historique</th>
+                <td>{{ plante.historique }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ plante.ville }}</td>
+            </tr>
+            <tr>
+                <th>Maladie</th>
+                <td>{{ plante.maladie.nom }}</td>
+            </tr>
+            <tr>
+                <th>Catégorie</th>
+                <td>{{ plante.categorie.nom }}</td>
+            </tr>
+{#            <tr>#}
+{#                <th>Date De Creation</th>#}
+{#                <td>{{ plante.dateDeCreation ? plante.dateDeCreation|date('Y-m-d') : '' }}</td>#}
+{#            </tr>#}
+            <tr>
+                <th>Position</th>
+                <td>
+{#                    <p>{{ plante.position }}</p>#}
+                    <iframe src="{{ plante.position }}"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </td>
+            </tr>
+            {# <tr> #}
+            {# <th>Image</th> #}
+            {# <td>{{ plante.image }}</td> #}
+            {# </tr> #}
+            </tbody>
+        </table>
+
+        <a href="{{ path('plante_index') }}" class="btn btn-dark">{% trans %}revenir à la liste{% endtrans %}</a>
+    </div>
+
+{% endblock %}

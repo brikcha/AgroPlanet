@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ajouter une nouvelle catégorie{% endblock %}
+
+{% block body %}
+ <div class="m-3">
+     <h1>{% trans %}Ajouter une nouvelle Catégorie{% endtrans %}</h1>
+
+     {{ include('categorie/_form.html.twig') }}
+
+     <a href="{{ path('categorie_index') }}" class="btn-dark btn">{% trans %}revenir à la liste{% endtrans %}</a>
+ </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base2.html.twig' %}
+{% block body %}
+    <div class="register-box">
+        <div class="register-logo">
+            <a href=""><b>Admin</b>LTE</a>
+        </div>
+        <div class="card">
+            {{ form_start(form) }}
+            <div class="card-body register-card-body">
+                <p class="login-box-msg">Register a new membership</p>
+
+                        {{ form_row(form.username, { 'label':'Nom d\'utilisateur', 'attr': {'placeholder' :'Nom '} }) }}
+
+
+
+                    {{ form_row(form.email, { 'attr': { 'placeholder': 'Adresse email...', 'class': 'form-control' } } ) }}
+
+                    {{ form_row(form.password, { 'label':'Mot de passe', 'attr': {'placeholder':'Mot de passe...', 'class': 'form-control' } }) }}
+
+                    {{ form_row(form.confirm_password, { 'label':'Répétez votre mot de passe',
+                        'attr':{'placeholder':'Répétez votre mot de passe...', 'class': 'form-control' } }) }}
+
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary btn-block">Inscription</button>
+                </div>
+
+            </div>
+            {{ form_end(form) }}
+            <!-- /.form-box -->
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block title %}
+    Ajouter un utilisateur
+{% endblock %}
+

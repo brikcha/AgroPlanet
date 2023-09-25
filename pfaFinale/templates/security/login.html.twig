@@ -1,0 +1,63 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {# <form action="{{ path('security_login') }}" method="post"> #}
+    {# <div class="form-group"> #}
+    {# <input placeholder="Adresse email..." requied name="_username" value="{{ lastUsername }}" #}
+    {# type="text" class="form-control"> #}
+    {# </div> #}
+    {# <div class="form-group"> #}
+    {# <input placeholder="Mode de passe..." requied name="_password" #}
+    {# type="password" class="form-control"> #}
+    {# </div> #}
+    {# <div class="form-group"> #}
+    {# <button type="submit" class="btn btn-success">Connexion</button> #}
+    {# </div> #}
+    {# </form> #}
+
+
+
+
+    <div class="hold-transition login-page">
+        <div class="login-box">
+            <div class="card">
+                <div class="card-body login-card-body">
+                    <p class="login-box-msg">Connexion</p>
+
+                    <form action="{{ path('security_login') }}" method="post">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email" name="_username"
+                                   value="{{ lastUsername }}">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password" name="_password">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary btn-block">Connexion</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.login-card-body -->
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block title %}
+
+{% endblock %}
+
